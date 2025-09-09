@@ -6,18 +6,18 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
-import ru.laypanov.spring.CrudApplicationUserSpringBoot.dao.UserDao;
 import ru.laypanov.spring.CrudApplicationUserSpringBoot.model.User;
+import ru.laypanov.spring.CrudApplicationUserSpringBoot.services.UserServices;
 
 
 @Controller
 @RequestMapping("/users")
 public class UserController {
 
-    private final UserDao userServise;
+    private final UserServices userServise;
 
     @Autowired
-    public UserController(UserDao userServise) {
+    public UserController(UserServices userServise) {
         this.userServise = userServise;
     }
 
